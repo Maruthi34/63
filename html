@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive FAQ Section</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+            padding: 1rem;
+        }
+        .faq {
+            width: 80%;
+            max-width: 600px;
+        }
+        .faq h2 {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        .faq-item {
+            background-color: white;
+            margin: 1rem 0;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .faq-item input {
+            display: none;
+        }
+        .faq-item label {
+            display: block;
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        .faq-item .content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            padding: 0 1rem;
+        }
+        .faq-item input:checked ~ .content {
+            max-height: 100vh;
+            padding: 1rem;
+        }
+        .faq-item .content p {
+            padding: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <input type="checkbox" id="faq1">
+            <label for="faq1">What is your return policy?</label>
+            <div class="content">
+                <p>Our return policy allows returns within 30 days of purchase with a valid receipt.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <input type="checkbox" id="faq2">
+            <label for="faq2">How long does shipping take?</label>
+            <div class="content">
+                <p>Shipping typically takes 5-7 business days, depending on your location.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <input type="checkbox" id="faq3">
+            <label for="faq3">Do you offer international shipping?</label>
+            <div class="content">
+                <p>Yes, we offer international shipping to select countries. Please contact us for more details.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
